@@ -1,0 +1,215 @@
+/* Titulo e subtitulo */
+.titulo-principal {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    /* azul destaque */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitulo {
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.corpo-home {
+    max-width: 80%;
+    margin: 0 auto;
+    /* padding: 20px; */
+}
+
+/* HEADER */
+.header {
+  position: relative; /* referência para posicionar o botão */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #6a0dad;
+  color: #fff;
+}
+
+
+/* LOGO */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+}
+
+.logo img {
+    height: 40px;
+    /* ajusta o tamanho da logo */
+    width: auto;
+    /* mantém proporção */
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    display: flex;
+    gap: 20px;
+  color: #fff;                  /* cor do texto */
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  padding: 8px 16px;            /* espaço interno para parecer botão */
+  border-radius: 6px;           /* bordas arredondadas */
+  background-color: transparent; /* fundo padrão */
+  transition: all 0.3s ease;    /* suaviza a transição */
+}
+
+.nav a:hover {
+  background-color: #ffd700;    /* cor de fundo ao passar o mouse */
+  color: #6a0dad;               /* muda a cor do texto no hover */
+}
+
+/* Botão hambúrguer flutuante */
+.menu-toggle {
+  display: none; /* escondido em desktop */
+  position: absolute;
+  right: 20px;   /* fixa no canto direito */
+  top: 15px;     /* fixa no topo */
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+/* Hero Section */
+.hero {
+    background-color: #a67ffd;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* overlay escuro para destacar texto */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Cards Section */
+.cards-container {
+    background: url('/images/motos-banner-home.jpg') center/cover no-repeat;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    /* margin: 40px 20px; */
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 280px;
+    height: 100px;
+    /* altura fixa para cada card */
+    padding: 20px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    /* evita que o conteúdo ultrapasse */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #007bff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #777;
+    /* margin-top: 40px; */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .corpo-home {
+    max-width: 100%;  /* em telas pequenas ocupa toda a largura */
+    padding: 15px;
+  }
+}
+
+/* NAV responsivo (celular) */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: #6a0dad;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
