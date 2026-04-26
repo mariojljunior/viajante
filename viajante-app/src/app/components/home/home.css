@@ -29,13 +29,16 @@
 
 /* HEADER */
 .header {
-  position: relative; /* referência para posicionar o botão */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #6a0dad;
-  color: #fff;
+    position: relative;
+    /* referência para posicionar o botão */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #6a0dad;
+    color: #fff;
+    position: relative;
+    z-index: 10;
 }
 
 
@@ -63,32 +66,42 @@
 .nav a {
     display: flex;
     gap: 20px;
-  color: #fff;                  /* cor do texto */
-  text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  padding: 8px 16px;            /* espaço interno para parecer botão */
-  border-radius: 6px;           /* bordas arredondadas */
-  background-color: transparent; /* fundo padrão */
-  transition: all 0.3s ease;    /* suaviza a transição */
+    color: #fff;
+    /* cor do texto */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 8px 16px;
+    /* espaço interno para parecer botão */
+    border-radius: 6px;
+    /* bordas arredondadas */
+    background-color: transparent;
+    /* fundo padrão */
+    transition: all 0.3s ease;
+    /* suaviza a transição */
 }
 
 .nav a:hover {
-  background-color: #ffd700;    /* cor de fundo ao passar o mouse */
-  color: #6a0dad;               /* muda a cor do texto no hover */
+    background-color: #ffd700;
+    /* cor de fundo ao passar o mouse */
+    color: #6a0dad;
+    /* muda a cor do texto no hover */
 }
 
 /* Botão hambúrguer flutuante */
 .menu-toggle {
-  display: none; /* escondido em desktop */
-  position: absolute;
-  right: 20px;   /* fixa no canto direito */
-  top: 15px;     /* fixa no topo */
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
+    display: none;
+    /* escondido em desktop */
+    position: absolute;
+    right: 20px;
+    /* fixa no canto direito */
+    top: 15px;
+    /* fixa no topo */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
 }
 
 
@@ -140,23 +153,31 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    min-height: 500px;
+    height: auto;
+    padding: 40px 20px;
     /* margin: 40px 20px; */
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.85);
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
     width: 280px;
-    height: 100px;
-    /* altura fixa para cada card */
-    padding: 20px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-    font-family: 'Poppins', sans-serif;
     overflow: hidden;
-    /* evita que o conteúdo ultrapasse */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 20px;
 }
 
 .card:hover {
@@ -187,29 +208,38 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .corpo-home {
-    max-width: 100%;  /* em telas pequenas ocupa toda a largura */
-    padding: 15px;
-  }
+    .corpo-home {
+        max-width: 100%;
+        /* em telas pequenas ocupa toda a largura */
+        padding: 15px;
+    }
+
+    .titulo-principal {
+        line-height: 1.2;
+    }
 }
 
 /* NAV responsivo (celular) */
 @media (max-width: 768px) {
-  .nav {
-    display: none;
-    flex-direction: column;
-    background-color: #6a0dad;
-    width: 100%;
-    padding: 10px;
-  }
+    .nav {
+        display: none;
+        flex-direction: column;
+        background-color: #6a0dad;
+        width: 100%;
+        position: absolute;
+        /* O menu flutua sobre o Hero */
+        top: 60px;
+        /* Altura do seu header */
+        left: 0;
+        z-index: 10;
+        padding: 20px 0;
+    }
 
-  .nav.show {
-    display: flex;
-  }
+    .nav.show {
+        display: flex;
+    }
 
-  .menu-toggle {
-    display: block;
-  }
+    .menu-toggle {
+        display: block;
+    }
 }
-
-

@@ -1,9 +1,11 @@
-import { Component, inject } from '@angular/core';
-import { EnviaFormulario } from '../../services/envia-formulario';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'; // Importante para o [class]
+import { RouterLink } from '@angular/router'; // Importante para navegação interna
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true, // Garanta que está como standalone
+  imports: [CommonModule, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -13,5 +15,4 @@ export class Home {
   toggleMenu() {
     this.menuAberto = !this.menuAberto;
   }
-
 }

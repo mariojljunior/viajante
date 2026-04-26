@@ -1,15 +1,15 @@
 <main class="corpo-home">
     <!-- Header Section -->
-<header class="header">
-  <div class="logo">Viajante</div>
-  <button class="menu-toggle" (click)="toggleMenu()">☰</button>
-  <nav class="nav" [class.show]="menuAberto">
-    <a href="/">Início</a>
-    <a href="/destinos">Destinos</a>
-    <a href="/planejar">Planejar Viagem</a>
-    <a href="/compartilhar">Compartilhar Experiências</a>
-  </nav>
-</header>
+    <!-- <header class="header">
+        <div class="logo">Viajante</div>
+        <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+        <nav class="nav" [class.show]="menuAberto">
+            <a routerLink="/">Início</a>
+            <a routerLink="/destinos">Destinos</a>
+            <a routerLink="/planejar">Planejar Viagem</a>
+            <a routerLink="/compartilhar">Compartilhar Experiências</a>
+        </nav>
+    </header> -->
 
     <!-- Hero Section -->
     <section class="hero">
@@ -17,24 +17,33 @@
             <h1 class="titulo-principal">Bem-vindo ao Viajante!</h1>
             <p class="subtitulo">Descubra destinos incríveis, planeje suas viagens e compartilhe suas experiências com
                 outros viajantes.</p>
-            <!-- <a href="/destinos" class="cta-button">Explorar agora</a> -->
+            <a routerLink="/destinos" class="cta-button">Explorar agora</a>
         </div>
     </section>
 
     <!-- Cards Section -->
     <section class="cards-container">
-        <div class="card">
-            <h2>Explorar Destinos</h2>
-            <p>Encontre os melhores destinos para suas próximas aventuras.</p>
-        </div>
-        <div class="card">
-            <h2>Planejar Viagens</h2>
-            <p>Organize seu itinerário e aproveite ao máximo cada viagem.</p>
-        </div>
-        <div class="card">
-            <h2>Compartilhar Experiências</h2>
-            <p>Conecte-se com outros viajantes e compartilhe suas histórias.</p>
-        </div>
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=400" alt="Destinos Incríveis">
+            <div class="card-info">
+                <h2>Explorar Destinos</h2>
+                <p>Encontre os melhores destinos para suas próximas aventuras.</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=400" alt="Planejamento">
+            <div class="card-info">
+                <h2>Planejar Viagens</h2>
+                <p>Organize seu itinerário e aproveite ao máximo cada viagem.</p>
+            </div>
+        </article>
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=400" alt="Comunidade">
+            <div class="card-info">
+                <h2>Compartilhar Experiências</h2>
+                <p>Conecte-se com outros viajantes e compartilhe suas histórias.</p>
+            </div>
+        </article>
     </section>
 
     <!-- Footer -->
